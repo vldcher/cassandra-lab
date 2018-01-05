@@ -1,0 +1,116 @@
+<div class="client" ng-controller="client">
+  <div class="col-md-12">
+    <div class="col-md-3 user-form" >
+      <div class="" align="center">
+        Create Passanger
+      </div>
+      <form class="col-md-12" ng-submit="create(name, middlename, lastname)">
+        <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+          <input type="text" class="form-control" placeholder="Name" ng-model="name">
+        </div>
+        <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+          <input type="text" class="form-control" placeholder="Middlename" ng-model="middlename">
+        </div>
+        <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+          <input type="text" class="form-control" placeholder="Lastname" ng-model="lastname">
+        </div>
+        <div class="login-submit">
+          <button type="submit" class="btn btn-success"> <i class="fa fa-plus"></i></button>
+        </div>
+      </form>
+    </div>
+    <div class="col-md-3">
+      <div class="col-md-12 user-form">
+        <div class="col-md-12" align="center">
+          <span> Update Passanger</span>
+        </div>
+        <form class="col-md-12" ng-submit="updateUser(update)" >
+          <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <input type="text" class="form-control" placeholder="Name" ng-model="update.name">
+          </div>
+          <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <input type="text" class="form-control" placeholder="Middlename" ng-model="update.middlename">
+          </div>
+          <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <input type="text" class="form-control" placeholder="Lastname" ng-model="update.lastname">
+          </div>
+<!--           <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <input type="text" class="form-control" placeholder="Balance" ng-model="update.balance">
+          </div> -->
+          <div class="login-submit">
+            <button type="submit" class="btn btn-success"> <i class="fa fa-pencil" aria-hidden="true"></i> </button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+
+
+    <div class="col-md-6">
+      <div class="col-md-12">
+        <div class="col-md-12" align="center">
+          <h2 style="font-size: 25px; margin-bottom: 30px" >Passangers information:</h2>
+        </div>
+        <table class="table top30">
+          <thead>
+            <tr>
+             <!--          <th>Id</th> -->
+             <th>Name</th>
+             <th>SecName</th>
+             <th>LastName</th>
+             <!--   <th>Balance</th> -->
+             <!--     <th><span>Delete Action</span></th> -->
+           </tr>
+         </thead>
+         <tbody>
+          <tr ng-repeat="user in users"
+          ng-click="select(user, $event)"
+          ng-class="{'selected': selectedId === user.user_id}">
+          <!--       <td>{{user.user_id}}</td> -->
+          <td>{{user.fio.firstname}}</td>
+          <td>{{user.fio.middlename}}</td>
+          <td>{{user.fio.lastname}}</td>
+          <!--         <td>{{user.balance}}</td> -->
+          <td>
+            <button type="button" class="btn actions btn-danger" name="button" ng-click="delete(user, $event)">
+              <i class="fa fa-times"  aria-hidden="true" ></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<!-- <div class="col-md-6" style="height: 150px"></div> -->
+<div class="col-md-3 user-form">
+  <div class="col-md-12" align="center">
+    <span> Show airports where user take a flight </span>
+  </div>
+  <form class="col-md-12" ng-submit="showCountedBanks(update)" >
+    <div class="form-group">
+      <label for="user">Click on user in usertable</label>
+      <div class="input-group">
+        <input type="text" disabled ng-model="update.lastname" style="color: black">
+      </div>
+      <label for="user">Airports:</label>
+      <div class="input-group">
+        <input type="text" disabled ng-model="countedBanks" style="color: black">
+      </div>
+    </div>
+    <div class="login-submit">
+      <button type="submit" class="btn btn-success"> Show results </button>
+    </div>
+  </form>
+</div>
+
+
+</div>
+</div>
+<div ui-view></div>

@@ -1,0 +1,72 @@
+body {
+   font-family: Raleway-Regular;
+   font-size: 14px;
+}
+
+header {
+  background-color: white;
+}
+
+/*.navbar {
+  margin-bottom: 0px;
+
+}*/
+img {
+  max-width: 200px;
+}
+/*
+.brand {
+  font-size: 24px;
+  font-weight: 400;
+  color: #666;
+}*/
+
+.menu li a {
+  color: #fff;
+  opacity: 0.9;
+}
+
+.menu li a:hover{
+  opacity: 1;
+  cursor: pointer;
+  background-color: #333;
+}
+
+.menu li a:focus{
+  opacity: 1;
+  cursor: pointer;
+  background-color: #333;
+}
+
+.menu {
+  margin-right: 20px;
+}
+
+.container-fluid{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.selected {
+  background-color: red
+}
+
+/*.user-form {
+  border: 1px solid gray;
+}
+*/
+.top30 {
+  margin-top: 30px;
+}
+
+.top10 {
+  margin-top: 10px;
+}
+
+.login-submit {
+  text-align: center;
+}
+
+.input-group{
+  margin-bottom: 10px;
+}

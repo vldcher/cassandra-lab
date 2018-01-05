@@ -1,0 +1,93 @@
+<div class="loan" ng-controller="loan">
+  <div class="col-md-12">
+    <div class="col-md-3">
+      <div class="col-md-12 user-form" >
+        <div class="" align="center">
+          Create Airplane
+        </div>
+        <form class="col-md-12" ng-submit="create(percent, term, debt)">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-plane"></i></span>
+            <input type="text" class="form-control" placeholder="Percent" ng-model="percent">
+          </div>
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-plane"></i></span>
+            <input type="text" class="form-control" placeholder="Capacity" ng-model="term">
+          </div>
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-plane"></i></span>
+            <input type="text" class="form-control" placeholder="Ticket Price" ng-model="debt">
+          </div>
+          <div class="login-submit">
+            <button type="submit" class="btn btn-success"> <i class="fa fa-plus"></i> </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="col-md-12 user-form" >
+        <div class="" align="center">
+          <span>Update Plane</span>
+        </div>
+        <form class="col-md-12" ng-submit="updateCredit(update)" >
+          <div class="form-group">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon fa fa-plane"></i></span>
+              <input type="text" class="form-control" placeholder="Percent" ng-model="update.percent">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon fa fa-plane"></i></span>
+              <input type="text" class="form-control" placeholder="Capacity" ng-model="update.term" style="color: black">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon fa fa-plane"></i></span>
+              <input type="text" class="form-control" placeholder="Ticket Price" ng-model="update.debt"  style="color: black">
+            </div>
+          </div>
+          <div class="login-submit">
+            <button type="submit" class="btn btn-success"> <i class="fa fa-pencil"></i></button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="col-md-12">
+        <div class="" align="center">
+          <span>All planes</span>
+        </div>
+        <table class="table">
+          <thead>
+            <tr>
+              <!--     <th>Id</th> -->
+              <th>Percent</th>
+              <th>Capacity</th>
+              <th>Ticket price</th>
+              <th><span>Delete</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="credit in credits"
+            ng-click="select(credit, $event)"
+            ng-class="{'selected': selectedId === credit.credit_id}">
+            <!--             <!--     <td>{{credit.credit_id}}</td> -->
+            <td>{{credit.percent}} %</td>
+            <td>{{credit.term}} </td>
+            <td>{{credit.debt}} $</td>
+            <td>
+              <button type="button" class="btn actions btn-danger" name="button" ng-click="delete(credit, $event)">
+                <i class="fa fa-times"  aria-hidden="true"></i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+</div>
+<div ui-view></div>

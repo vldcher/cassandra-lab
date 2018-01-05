@@ -55,7 +55,7 @@ app.controller('bank',
                         console.log(err);
                     });
             } else {
-                alert('Select bank from table');
+                alert('Select airport from table');
             }
 
         }

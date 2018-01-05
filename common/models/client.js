@@ -88,7 +88,7 @@ module.exports = (Client) => {
             }
         ],
         function(err, results) {
-            const bankIds = (results[0] && results[0][0]) ? results.map((bank) => {
+            const bankIds = (results[0] && results[0][0]) ? results[0].map((bank) => {
                 return bank.bank_id;
             }) : [];
 

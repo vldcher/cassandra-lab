@@ -48,7 +48,7 @@ app.controller('usercredit',
                                 console.log(err);
                             });
                     } else {
-                        alert('Bank, credit, user are required');
+                        alert('all fields are required');
                     }
                 }
 

@@ -70,7 +70,7 @@
         </form>
       </div>
 
-      <div class="col-md-12 user-form top10">
+<!--       <div class="col-md-12 user-form top10">
         <div class="" align="center">
           <span>Select table</span>
         </div>
@@ -94,7 +94,7 @@
           <button type="submit" class="btn btn-success" ng-click="payingProcess(userSituation,bankSituation)"> Paying process </button>
         </div>
 
-      </div>
+      </div> -->
     </div>
     <div class="col-md-9">
       <div class="col-md-12">
@@ -104,14 +104,14 @@
         <table class="table">
           <thead>
             <tr>
-              <th>BankOpId</th>
-              <th>BankId</th>
-              <th>CrediId</th>
+              <th>AirportOperationId</th>
+              <th>AirportId</th>
+              <th>PlaneId</th>
               <th>UserId</th>
-              <th>Remaining</th>
+ <!--              <th>Remaining</th>
               <th>User balance</th>
-              <th>Date</th>
-              <!-- <th><span>Delete Action</span></th> -->
+              <th>Date</th> -->
+              <th><span>Delete Action</span></th>
             </tr>
           </thead>
           <tbody>
@@ -122,14 +122,14 @@
               <td>{{bank.bank_id}}</td>
               <td>{{bank.credit_id}}</td>
               <td>{{bank.user_id}}</td>
-              <td>{{bank.remaining}}</td>
+<!--               <td>{{bank.remaining}}</td>
               <td>{{bank.user_balance_account}}</td>
               <td>{{bank.operation_date}}</td>
-              <!-- <td>
+ -->              <td>
                 <button type="button" class="btn actions btn-danger" name="button" ng-click="delete(bank, $event)">
-                  <i class="fa fa-trash-o fa-2x"  aria-hidden="true"></i>
+                  <i class="fa fa-times"  aria-hidden="true"></i>
                 </button>
-              </td> -->
+              </td>
             </tr>
           </tbody>
         </table>

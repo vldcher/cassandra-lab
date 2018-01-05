@@ -48,7 +48,7 @@ app.controller('client',
                         }
                         return el;
                     });
-                    alert('success');
+                    alert('successful changes');
                     $scope.update = {};
                     $scope.selectedId = null;
                 })
@@ -95,12 +95,12 @@ app.controller('client',
             if (user && user.id) {
                 BankOperation.userBanks({userId:user.id})
                 .$promise.then((users) => {
-                    const temp = Object.values(users[0]);
-                    $scope.countedBanks = temp[0];
+                    const temp = Object.values(users.rows[0]);
+                    $scope.countedBanks = temp[0] + "airplane";
                 })
                 .catch((err) => {
                     console.log(err);
-                    alert("You don't have any credit in banks")
+                    alert("You don't have any planes in airports")
                 });
             } else {
                 alert('Select user from table');

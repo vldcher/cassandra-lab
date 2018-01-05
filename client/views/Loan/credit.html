@@ -8,7 +8,7 @@
         <form class="col-md-12" ng-submit="create(percent, term, debt)">
           <div class="input-group">
             <span class="input-group-addon"><i class="fa fa-plane"></i></span>
-            <input type="text" class="form-control" placeholder="Percent" ng-model="percent">
+            <input type="text" class="form-control" placeholder="Plane" ng-model="percent">
           </div>
           <div class="input-group">
             <span class="input-group-addon"><i class="fa fa-plane"></i></span>
@@ -33,7 +33,7 @@
           <div class="form-group">
             <div class="input-group">
               <span class="input-group-addon"><i class="glyphicon fa fa-plane"></i></span>
-              <input type="text" class="form-control" placeholder="Percent" ng-model="update.percent">
+              <input type="text" class="form-control" placeholder="Plane" ng-model="update.percent">
             </div>
           </div>
           <div class="form-group">
@@ -63,7 +63,7 @@
           <thead>
             <tr>
               <!--     <th>Id</th> -->
-              <th>Percent</th>
+              <th>Airplanes</th>
               <th>Capacity</th>
               <th>Ticket price</th>
               <th><span>Delete</span></th>
@@ -74,7 +74,7 @@
             ng-click="select(credit, $event)"
             ng-class="{'selected': selectedId === credit.credit_id}">
             <!--             <!--     <td>{{credit.credit_id}}</td> -->
-            <td>{{credit.percent}} %</td>
+            <td>{{credit.percent}} airplane</td>
             <td>{{credit.term}} </td>
             <td>{{credit.debt}} $</td>
             <td>

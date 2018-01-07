@@ -34,7 +34,7 @@
       </div>
       <div class="col-md-12 user-form top10">
         <div class="" align="center">
-          User Pay Money
+          User buy ticket
         </div>
         <form class="col-md-12" ng-submit="payMoney(selectedBankMoney, selectedCreditMoney, selectedUserMoney, payedMoney)" style="color: black">
           <div class="form-group" align="center">
@@ -59,7 +59,7 @@
             </div>
           </div>
           <div class="form-group" align="center">
-            <label for="user">Money for a credit</label>
+            <label for="user">Money for a ticket</label>
             <div class="input-group">
             <input type="text" name="payedMoney" ng-model="payedMoney" style="color: black">
             </div>
@@ -104,21 +104,21 @@
         <table class="table">
           <thead>
             <tr>
-              <th>AirportOperationId</th>
+             <!--  <th>AirportOperationId</th> -->
               <th>AirportId</th>
               <th>PlaneId</th>
               <th>UserId</th>
  <!--              <th>Remaining</th>
               <th>User balance</th>
               <th>Date</th> -->
-              <th><span>Delete Action</span></th>
+              <th><span>Delete Flight</span></th>
             </tr>
           </thead>
           <tbody>
             <tr ng-repeat="bank in bankOperations"
                 ng-click="select(bank, $event)"
                 ng-class="{'selected': createLoan === bank.bank_operation_id}">
-              <td>{{bank.bank_operation_id}}</td>
+          <!--     <td>{{bank.bank_operation_id}}</td> -->
               <td>{{bank.bank_id}}</td>
               <td>{{bank.credit_id}}</td>
               <td>{{bank.user_id}}</td>

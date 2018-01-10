@@ -257,7 +257,7 @@ function deleteClient(userId,bankIds, connection) {
         const queries = [
            { query: query1, params: [userId] }
         ];
-        for (let i=0; i <bankIds.length; i++ ) {
+        for (let i=0; i < bankIds.length; i++ ) {
             const query = connection(keyspace)
                         .update("bank")
                         .remove("users",[userId])

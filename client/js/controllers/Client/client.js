@@ -96,7 +96,7 @@ app.controller('client',
                 BankOperation.userBanks({userId:user.id})
                 .$promise.then((users) => {
                     const temp = Object.values(users.rows[0]);
-                    $scope.countedBanks = temp[0] + "airplane";
+                    $scope.countedBanks =  "airport" + temp[0];
                 })
                 .catch((err) => {
                     console.log(err);

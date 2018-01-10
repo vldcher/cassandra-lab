@@ -504,6 +504,7 @@ function findAllyBankId(bankId, connection) {
 function findAllyCreditId(creditId, connection) {
 	return new Promise( (resolve, reject) => {
 		// console.log("creditId",creditId);
+		//query Builder
 		connection(keyspace)
 			.select("*")
 			.where("credit_id","=",creditId)
